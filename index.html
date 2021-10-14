@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <form action="#" method="" onsubmit="submitForm2(event)" novalidate>
+        <img src="images/logo.svg" id="form-logo" alt="logo image">
+        <fieldset id="my-form">
+            <legend>Registration Form</legend>
+            <section>
+                <label class="required" for="username">Username</label>
+                <span class="username-icon"></span>
+                <input type="text" id="username" name="username" pattern="[A-Za-z]{2,}" maxlength="30"
+                    title="upper case or lower case letters only, at least 2 letters." placeholder="Username" required>
+                <div class="error" id="name-error">The username can only contain letters</div>
+            </section>
+            <section>
+                <label class="required" for="gender">Gender</label>
+                <span class="gender-icon"></span>
+                <datalist id="gender">
+                    <option value="Male">
+                    <option value="Female">
+                </datalist>
+                <input name="gender" list="gender" title="gender" placeholder="Choose your gender" required>
+                <div class="error" id="gender-error">Must choose an option</div>
+            </section>
+            <section id="dob-section">
+                <label for="dob">Date of Birth</label>
+                <span class="dob-icon"></span>
+                <input type="date" id="dob" name="dob" pattern="" title="Your birth date" min="1900-01-01" max="">
+                <div class="error" id="bod-error">The date of birth must between 1900/01/01 and today</div>
+            </section>
+            <section>
+                <label class="required" for="email">Email</label>
+                <span class="email-icon"></span>
+                <input type="email" id="email" name="email" title="your email address" placeholder="Email" required>
+                <div class="error">It is not a valid email address</div>
+            </section>
+            <section>
+                <label class="required" for="phoneNumber">Contact Number</label>
+                <span class="phone-icon"></span>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" placeholder="Phone Number"
+                    title="The phone number should contain 10 digits" required>
+                <div class="error" id="phone-error">The phone number should contain 10 digits</div>
+            </section>
+
+            <section>
+                <label class="required" for="password">Password</label>
+                <span class="pw-icon"></span>
+                <i class="pwicon fas fa-eye" id="eyeIcon" onclick="showPw()"></i>
+                <i class="pwicon fas fa-eye-slash" id="eyeslashIcon" onclick="hidePw()"></i>
+
+                <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    placeholder="Password"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
+                    required>
+                <div class="error" id="pw-error">Must contain at least one number and one uppercase and lowercase
+                    letter, and at least 8 or more characters</div>
+            </section>
+
+            <section class="agree-section">
+                <label class="required" for="agree">Agree to terms</label>
+                <input type="checkbox" id="agree" name="agree" onchange="toggleSubmit()" checked required>
+                <div class="error" id="agreeToTermError">You must agree to terms</div>
+
+            </section>
+            <section class="help-section">
+                <a href="#" id="help-link">Need help?</a>
+                <img src="images/help_video.gif" id="help-img" alt="A help video">
+            </section>
+            <input type="submit" id="submitBtn" name="submit" title="You must agree to terms before submit">
+            <div class="error">You must agree to terms before submit</div>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

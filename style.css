@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset {
+    border-style: none;
+}
+
+form {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    padding: 40px 0;
+}
+
+form>fieldset>section {
+    width: 100%;
+    margin-bottom: 10px;
+    display: grid;
+    position: relative;
+}
+
+input,
+select {
+    padding: 12px 0 12px 40px;
+    margin: 5px 0;
+    border: solid 1px lightgrey;
+
+}
+
+input:empty,
+select:invalid {
+    background-color: #EEEEEE;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    box-shadow: red 1px 1px 1px;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid+.error {
+    display: block;
+}
+
+input:valid,
+select:valid {
+    box-shadow: skyblue 1px 1px 1px;
+    background-color: white;
+}
+
+input:valid+.error,
+select:valid+.error,
+label,
+#dob-section
+ {
+    display: none;
+}
+
+legend {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 20px auto;
+}
+
+span::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: rgb(118, 118, 118);
+    position: absolute;
+    left: 6px;
+    top: 18px;
+}
+
+.agree-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.error,
+#agreeToTermError {
+    display: none;
+    color: red;
+}
+
+.help-section>a {
+    text-decoration: none;
+    width: 100px;
+}
+
+.icon,
+.pwicon {
+    position: absolute;
+    padding: 10px;
+    min-width: 30px;
+    color: rgb(118, 118, 118);
+    margin: 5px 0;
+}
+
+.pwicon {
+    justify-self: flex-end;
+    padding-right: 0;
+}
+
+.pwicon:hover {
+    opacity: 50%;
+}
+
+.fa-eye-slash {
+    visibility: hidden;
+}
+
+.required::after {
+    content: "*";
+    color: red;
+}
+
+#agree {
+    width: auto;
+    margin-right: 10px;
+    box-shadow: none;
+}
+
+#agree:not(:checked)+.error {
+    display: block;
+}
+
+#dob {
+    color: rgb(118, 118, 118);
+    width: auto;
+}
+
+#form-logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+#help-img {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+#help-link:hover {
+    color: dodgerblue;
+}
+
+#help-link:hover+#help-img {
+    display: block;
+}
+
+#submitBtn {
+    background-color: skyblue;
+    width: 100%;
+    border-style: none;
+    border-radius: 5px;
+    padding-left: 0;
+    box-shadow: none;
+}
+
+#submitBtn:hover,
+#submitBtn:disabled {
+    background-color: lightblue;
+}
+
+#submitBtn:disabled+.error {
+    display: block;
+}
+
+.agree-section>label,
+.help-section>a {
+    display: inline-block;
+    margin: 5px 10px 5px 0;
+    color: rgb(118, 118, 118);
+    font-size: 13.33px;
+}
+
+.username-icon::after {
+    content: "\f007";
+}
+
+.gender-icon::after {
+    content: "\f228";
+}
+
+.dob-icon::after {
+    content: "\f1fd"
+}
+
+.email-icon::after {
+    content: "\f0e0"
+}
+
+.phone-icon::after {
+    content: "\f095"
+}
+
+.pw-icon::after {
+    content: "\f084"
+}
+
+.required+span::before {
+    content: "*";
+    color: rgb(118, 118, 118);
+    position: absolute;
+    left: 25px;
+    top: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 600px auto;
+    }
+
+    form {
+        grid-column: 2/3;
+        border: solid 1px lightgrey;
+    }
+
+    label {
+        display: block;
+    }
+
+    span::after {
+        top: 35px;
+    }
+
+    .agree-section>label,
+    .help-section>a,
+    #submitBtn {
+        color: black;
+        font-size: 16px;
+    }
+
+    .icon,
+    .pwicon {
+        margin-top: 25px;
+    }
+
+    .required+span::before {
+        top: 35px;
+    }
+
+    ::placeholder,
+    select:invalid {
+        color: transparent;
+    }
+
+    #dob-section {
+        display: grid;
+    }
+
+    #help-img {
+        width: 50%;
+    }
+}
