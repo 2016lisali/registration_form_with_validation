@@ -82,9 +82,7 @@ span::after {
     display: none;
     color: red;
 }
-.hidden-header {
-    display: none;
-}
+
 .help-section>a {
     text-decoration: none;
     width: 100px;
