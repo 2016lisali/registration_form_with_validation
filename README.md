@@ -1,5 +1,5 @@
 # Registration From with validation
-This project is a assignment for Diploma of Website Development course at Tafe QLD. 
+This project is an assignment for Diploma of Website Development course at Tafe QLD. 
 
 ![home page.](https://raw.githubusercontent.com/2016lisali/registration_form_with_validation/main/images/screenshot.jpg "home page.")
 
