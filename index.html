@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
@@ -52,13 +52,11 @@
                     title="The phone number should contain 10 digits" required>
                 <div class="error" id="phone-error">The phone number should contain 10 digits</div>
             </section>
-
             <section>
                 <label class="required" for="password">Password</label>
                 <span class="pw-icon"></span>
                 <i class="pwicon fas fa-eye" id="eyeIcon" onclick="showPw()"></i>
                 <i class="pwicon fas fa-eye-slash" id="eyeslashIcon" onclick="hidePw()"></i>
-
                 <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                     placeholder="Password"
                     title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters"
@@ -66,12 +64,10 @@
                 <div class="error" id="pw-error">Must contain at least one number and one uppercase and lowercase
                     letter, and at least 8 or more characters</div>
             </section>
-
             <section class="agree-section">
                 <label class="required" for="agree">Agree to terms</label>
                 <input type="checkbox" id="agree" name="agree" onchange="toggleSubmit()" checked required>
                 <div class="error" id="agreeToTermError">You must agree to terms</div>
-
             </section>
             <section class="help-section">
                 <a href="#" id="help-link">Need help?</a>
@@ -79,7 +75,6 @@
             </section>
             <input type="submit" id="submitBtn" name="submit" title="You must agree to terms before submit">
             <div class="error">You must agree to terms before submit</div>
-
         </fieldset>
     </form>
 

@@ -15,8 +15,9 @@ function submitForm2(event) {
 
     } else {
         alert("bad format")
+        return false
     }
-    return false
+    
 }
 
 /* ----------------- show or hide password ------------------*/
