@@ -1,7 +1,7 @@
-# FCC 25+5 Clock
+# Registration From with validation
 This project is a assignment for Diploma of Website Development course at Tafe QLD. 
 
-![home page.](https://raw.githubusercontent.com/2016lisali/registration_form_with_validation/images/screenshot.jpg "home page.")
+![home page.](https://raw.githubusercontent.com/2016lisali/registration_form_with_validation/main/images/screenshot.jpg "home page.")
 
 ## Features
 * responsive design

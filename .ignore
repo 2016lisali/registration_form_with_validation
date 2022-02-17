@@ -1,5 +1,4 @@
-documents/
-validations/
+
 # Compiled source #
 ###################
 *.com
@@ -38,3 +37,5 @@ validations/
 .Trashes
 ehthumbs.db
 Thumbs.db
+/documents
+/validations
